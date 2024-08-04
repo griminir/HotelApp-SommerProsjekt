@@ -7,23 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\BookRoom.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\HotelAppLibrary\HotelAppLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\BookRoom.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\BookRoom.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\BookRoom.cshtml" />
   </ItemGroup>
 
 </Project>

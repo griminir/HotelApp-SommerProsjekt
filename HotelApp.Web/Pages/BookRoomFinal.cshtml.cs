@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.ComponentModel.DataAnnotations;
 
 namespace HotelApp.Web.Pages
 {
-    public class BookRoomModel : PageModel
+    public class BookRoomFinalModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
         public int RoomTypeId { get; set; }
@@ -17,13 +16,18 @@ namespace HotelApp.Web.Pages
 
         [BindProperty]
         public string FirstName { get; set; }
-        
+
         [BindProperty]
         public string LastName { get; set; }
 
         public void OnGet()
         {
 
+        }
+
+        public IActionResult OnPost()
+        {
+            return RedirectToPage("/index");
         }
     }
 }
