@@ -14,4 +14,6 @@ public interface IDatabaseData
 
     List<BookingFullModel> SearchBookings(string lastName);
     void CheckInGuest(int bookingId);
+
+    RoomTypeModel GetRoomTypeById(int id);
 }
