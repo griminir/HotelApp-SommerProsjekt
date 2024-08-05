@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelApp.Desktop"
         mc:Ignorable="d" FontSize="20" FontFamily="Segoe UI"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Hotel Bookings" Height="450" Width="800">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
