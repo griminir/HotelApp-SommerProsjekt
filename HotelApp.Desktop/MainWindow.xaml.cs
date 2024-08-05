@@ -17,9 +17,17 @@ namespace HotelApp.Desktop
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly IDatabaseData _db;
         public MainWindow(IDatabaseData db)
         {
             InitializeComponent();
+            _db = db;
+        }
+
+        private void SearchForGuest_OnClick(object sender, RoutedEventArgs e)
+        {
+            var bookings = _db.SearchBookings(lastNameText.Text);
+            resultsList.ItemsSource = bookings;
         }
     }
 }
