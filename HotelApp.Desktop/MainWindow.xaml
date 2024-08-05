@@ -56,7 +56,8 @@
                             </StackPanel>
 
                             <Button Margin="5" Padding="10" Grid.Row="0" Grid.Column="1" 
-                                    Grid.RowSpan="4" VerticalAlignment="Center">
+                                    Grid.RowSpan="4" VerticalAlignment="Center"
+                                    Click="CheckInButton_Click">
                                 Check in
                             </Button>
 

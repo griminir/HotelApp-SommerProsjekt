@@ -4,9 +4,47 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelApp.Desktop"
-        mc:Ignorable="d"
-        Title="CheckInForm" Height="450" Width="800">
-    <Grid>
-        
+        mc:Ignorable="d" FontSize="20" FontFamily="Segoe UI"
+        Title="Check In validation" Height="300" Width="500" WindowStartupLocation="CenterOwner">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock FontWeight="Bold" Margin="5" >Reservation:</TextBlock>
+            <TextBlock x:Name="firstNameText" Margin="5"/>
+            <TextBlock x:Name="lastNameText" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <TextBlock FontWeight="Bold" Margin="5" >Room:</TextBlock>
+            <TextBlock x:Name="titleText" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <TextBlock FontWeight="Bold" Margin="5" >Room Number:</TextBlock>
+            <TextBlock x:Name="roomNumberText" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <TextBlock FontWeight="Bold" Margin="5" >Total Cost:</TextBlock>
+            <TextBlock x:Name="totalCostText" Margin="5"/>
+        </StackPanel>
+
+        <Button Margin="10" Padding="20 10" Grid.Row="4"
+                x:Name="CheckInUser" Click="CheckInUser_Click">
+            Confirm Check-In
+        </Button>
     </Grid>
 </Window>

@@ -14,12 +14,15 @@ namespace HotelApp.Desktop
     /// </summary>
     public partial class App : Application
     {
+        public static ServiceProvider ServiceProvider;
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
             var services = new ServiceCollection();
             services.AddTransient<MainWindow>();
+            services.AddTransient<CheckInForm>();
             services.AddTransient<ISqlDataAccess, SqlDataAccess>();
             services.AddTransient<IDatabaseData, SqlData>();
 
@@ -31,8 +34,8 @@ namespace HotelApp.Desktop
 
             services.AddSingleton(config);
 
-            var serviceProvider = services.BuildServiceProvider();
-            var mainWindow = serviceProvider.GetService<MainWindow>();
+            ServiceProvider = services.BuildServiceProvider();
+            var mainWindow = ServiceProvider.GetService<MainWindow>();
 
             mainWindow.Show();
         }
