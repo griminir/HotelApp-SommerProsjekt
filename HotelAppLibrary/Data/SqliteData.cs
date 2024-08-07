@@ -135,7 +135,11 @@ namespace HotelAppLibrary.Data
 
         public void CheckInGuest(int bookingId)
         {
-            throw new NotImplementedException();
+            var sql = @"update Bookings
+	                    set CheckedIn = 1
+	                    where Id = @Id";
+
+            _db.SaveData(sql, new { Id = bookingId }, connectionStringName);
         }
 
         public RoomTypeModel GetRoomTypeById(int id)
